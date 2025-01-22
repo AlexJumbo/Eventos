@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Configuración</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #config-panel {
+      display: none;
+      border: 1px solid #ccc;
+      padding: 20px;
+      background-color: #f9f9f9;
+      width: 300px;
+    }
+    .hidden {
+      display: none;
+    }
+    .list-item {
+      cursor: pointer;
+      padding: 5px;
+      border: 1px solid #ddd;
+      margin: 5px 0;
+    }
+    .list-item:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="page-title">Título de la Página</h1>
+  <button id="toggle-panel">Mostrar Panel</button>
+  
+  <div id="config-panel">
+    <form>
+      <label>
+        Cambiar Título:
+        <input type="text" id="title-input" placeholder="Escribe el nuevo título">
+      </label>
+      <br><br>
+      <label>
+        Cambiar Fondo:
+        <input type="color" id="bg-color-input">
+      </label>
+      <br><br>
+      <label>
+        <input type="checkbox" id="comments-toggle"> Habilitar Área de Comentarios
+      </label>
+      <br><br>
+      <textarea id="comments-area" rows="4" cols="30" disabled></textarea>
+    </form>
+  </div>
+
+  <h2>Lista de Elementos</h2>
+  <ul id="item-list">
+    <li class="list-item">Elemento 1</li>
+    <li class="list-item">Elemento 2</li>
+    <li class="list-item">Elemento 3</li>
+  </ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
